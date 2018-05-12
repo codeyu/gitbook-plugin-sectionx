@@ -2,11 +2,30 @@
     "name": "gitbook-plugin-sectionx-fork",
     "description": "A GitBook plugin for separating the page into sections.",
     "main": "index.js",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "engines": {
         "gitbook": ">=3.x.x"
     },
-    "keywords": ["section", "gitbook", "interactive", "panel"],
+    "gitbook": {
+        "properties": {
+            "head": {
+                "type": "boolean",
+                "title": "Show or no for section title",
+                "default": true
+            },
+            "tag": {
+                "type": "string",
+                "title": "Using Custom Tag for section title",
+                "default": "h2"
+            }
+        }
+    },
+    "keywords": [
+        "section",
+        "gitbook",
+        "interactive",
+        "panel"
+    ],
     "dependencies": {
         "cheerio": "*"
     },

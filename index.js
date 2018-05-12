@@ -17,13 +17,14 @@ module.exports = {
   hooks: {
 
     "page": function (page) {
+      var book = this;
       var content = page.content,
         match = content.match(/<!--\s*sec[\s\S]+?ces\s*-->[\s\S]+?<!--\s*endsec\s*-->/g),
         idList = [];
 
-      var showHead = this.config.get("pluginsConfig").sectionx.head;
-      
-      var customTag = this.config.get("pluginsConfig").sectionx.tag || 'h2';
+      var options = book.config.get('pluginsConfig.sectionx-fork', {});
+      var showHead = options.head;
+      var customTag = options.tag;
       if (!customTag.match(/^(h[1-6]|b)$/)) {
         customTag = 'h2';
       }
