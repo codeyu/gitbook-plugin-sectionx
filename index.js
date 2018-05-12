@@ -21,10 +21,9 @@ module.exports = {
         match = content.match(/<!--\s*sec[\s\S]+?ces\s*-->[\s\S]+?<!--\s*endsec\s*-->/g),
         idList = [];
 
+      var showHead = this.config.get("pluginsConfig").sectionx.head;
+      
       var customTag = this.config.get("pluginsConfig").sectionx.tag || 'h2';
-
-      var showHead = this.config.get("pluginsConfig").sectionx.head || true;
-
       if (!customTag.match(/^(h[1-6]|b)$/)) {
         customTag = 'h2';
       }
