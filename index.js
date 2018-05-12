@@ -23,6 +23,8 @@ module.exports = {
 
       var customTag = this.config.get("pluginsConfig").sectionx.tag || 'h2';
 
+      var showHead = this.config.get("pluginsConfig").sectionx.head || true;
+
       if (!customTag.match(/^(h[1-6]|b)$/)) {
         customTag = 'h2';
       }
@@ -100,7 +102,8 @@ module.exports = {
                 '<div class="panel-body">' + html + '</div>' +
                 '</div>' +
                 '</div>');
-
+              if (showHead === false)
+                $(this).find('.panel-heading').addClass('hidden');  
               if ($(this).data('show') === false)
                 $(this).find('.panel').addClass('hidden');
               else

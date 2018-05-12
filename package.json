@@ -1,8 +1,8 @@
 {
-    "name": "gitbook-plugin-sectionx",
+    "name": "gitbook-plugin-sectionx-fork",
     "description": "A GitBook plugin for separating the page into sections.",
     "main": "index.js",
-    "version": "3.1.0",
+    "version": "0.1.0",
     "engines": {
         "gitbook": ">=3.x.x"
     },
@@ -10,13 +10,13 @@
     "dependencies": {
         "cheerio": "*"
     },
-    "homepage": "https://github.com/ymcatar/gitbook-plugin-sectionx",
+    "homepage": "https://github.com/codeyu/gitbook-plugin-sectionx",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ymcatar/gitbook-plugin-sectionx.git"
+        "url": "https://github.com/codeyu/gitbook-plugin-sectionx.git"
     },
     "license": "GPL-3.0",
     "bugs": {
-        "url": "https://github.com/ymcatar/gitbook-plugin-sectionx/issues"
+        "url": "https://github.com/codeyu/gitbook-plugin-sectionx/issues"
     }
 }
